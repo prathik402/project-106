@@ -14,7 +14,7 @@ while True:
     ret, frame = cap.read()
 
     #Convert Each Frame into Grayscale
-    cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # Pass frame to our body classifier
     bodies = body_classifier.detectMultiScale(gray,1.2,3)
     
