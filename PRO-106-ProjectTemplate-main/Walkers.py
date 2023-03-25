@@ -25,6 +25,6 @@ while True:
         break
 for (x,y,w,h) in bodies:
     cv2.rectangle(cap,(x,y),(x+w,y+h),(255,0,0),2)
-cv2.imshow('img',cap)
+    cv2.imshow('Pedestrians',frame)
 cap.release()
 cv2.destroyAllWindows()
