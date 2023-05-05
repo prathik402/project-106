@@ -20,11 +20,11 @@ while True:
     
     # Extract bounding boxes for any bodies identified
     
-
+    for (x,y,w,h) in bodies:
+        cv2.rectangle(cap,(x,y),(x+w,y+h),(255,0,0),2)
+        cv2.imshow('Pedestrians',frame)
     if cv2.waitKey(1) == 32: #32 is the Space Key
         break
-for (x,y,w,h) in bodies:
-    cv2.rectangle(cap,(x,y),(x+w,y+h),(255,0,0),2)
-    cv2.imshow('Pedestrians',frame)
+
 cap.release()
 cv2.destroyAllWindows()
